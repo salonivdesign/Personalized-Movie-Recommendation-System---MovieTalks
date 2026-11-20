@@ -1,0 +1,9 @@
+column_name,data_type,description,notes
+user_id,integer,Anonymous identifier for the user who submitted a rating,Not a real-world identity
+movie_title,string,Movie title recorded in the college dataset,Used to create stable numeric movie_id values
+genre,string,Genre value recorded for the rating row,Metadata is inconsistent for repeated titles; do not treat as verified
+language,string,Language value recorded for the rating row,Metadata is inconsistent for repeated titles; do not treat as verified
+release_year,integer,Release year recorded for the rating row,Metadata is inconsistent for repeated titles; may be missing
+rating,float,User rating on a 1 to 5 scale,Values in supplied file include half-star increments
+timestamp,date,Date of rating,Source provides dates rather than full timestamps
+movie_id,integer,Stable numeric identifier generated from sorted unique movie_title values,Added during preprocessing for modelling

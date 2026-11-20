@@ -1,0 +1,4 @@
+model,RMSE,Precision@3,test_ratings,users_with_relevant_test_item
+User-based CF,1.128,0.2292,35,16
+Item-based CF,1.1248,0.2292,35,16
+SVD,1.1073,0.2292,35,16

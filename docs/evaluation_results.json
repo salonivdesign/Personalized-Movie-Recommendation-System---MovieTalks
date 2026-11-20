@@ -1,0 +1,50 @@
+{
+  "dataset": "college-provided dataset.csv",
+  "cleaning": {
+    "rows_input": 500,
+    "missing_required_values_removed": 0,
+    "invalid_ratings_removed": 0,
+    "duplicate_user_title_rows_removed": 27,
+    "metadata_inconsistencies": {
+      "genre": 8,
+      "language": 8,
+      "release_year": 8
+    },
+    "rows_clean": 473,
+    "users": 309,
+    "movies": 8,
+    "ratings": 473,
+    "rating_min": 1.0,
+    "rating_max": 5.0
+  },
+  "split": "For users with at least 3 ratings, hold out each eligible user's latest rating; other rows are training data.",
+  "relevance_threshold": "rating >= 4.0",
+  "results": [
+    {
+      "model": "User-based CF",
+      "RMSE": 1.128,
+      "Precision@3": 0.2292,
+      "test_ratings": 35,
+      "users_with_relevant_test_item": 16
+    },
+    {
+      "model": "Item-based CF",
+      "RMSE": 1.1248,
+      "Precision@3": 0.2292,
+      "test_ratings": 35,
+      "users_with_relevant_test_item": 16
+    },
+    {
+      "model": "SVD",
+      "RMSE": 1.1073,
+      "Precision@3": 0.2292,
+      "test_ratings": 35,
+      "users_with_relevant_test_item": 16
+    }
+  ],
+  "limitations": [
+    "Only a small number of distinct movie titles are present; ranking metrics are unstable and Precision@3 is only illustrative.",
+    "The supplied genre/language/release-year metadata is inconsistent by title.",
+    "This is a small holdout, not evidence of production-quality recommendation performance."
+  ]
+}

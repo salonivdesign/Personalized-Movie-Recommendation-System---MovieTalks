@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Data: MovieLens terms do not allow redistribution -> never commit it
+data/raw/*
+!data/raw/.gitkeep
+
+# Generated model artifacts (rebuild with scripts/train.py)
+artifacts/*
+!artifacts/.gitkeep
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets (none are needed, but keep it safe)
+.env

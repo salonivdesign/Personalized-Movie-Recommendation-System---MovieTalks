@@ -1,0 +1,17 @@
+{
+  "rows_input": 500,
+  "missing_required_values_removed": 0,
+  "invalid_ratings_removed": 0,
+  "duplicate_user_title_rows_removed": 27,
+  "metadata_inconsistencies": {
+    "genre": 8,
+    "language": 8,
+    "release_year": 8
+  },
+  "rows_clean": 473,
+  "users": 309,
+  "movies": 8,
+  "ratings": 473,
+  "rating_min": 1.0,
+  "rating_max": 5.0
+}

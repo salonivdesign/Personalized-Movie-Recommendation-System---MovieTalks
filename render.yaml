@@ -1,0 +1,13 @@
+# UNTESTED template for Render (https://render.com). Check Render's current free-tier limits.
+# Training runs in the BUILD step; the start command only loads saved artifacts.
+services:
+  - type: web
+    name: movietalks-recommender
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt && python scripts/download_data.py && python scripts/train.py --no-tune
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
