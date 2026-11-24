@@ -1,4 +1,4 @@
-MovieTalks --- Personalized Movie Recommendation System
+#MovieTalks --- Personalized Movie Recommendation System
 MovieTalks is a movie recommendation application developed using a
 college-provided movie ratings dataset. It demonstrates
 collaborative filtering techniques and provides a web interface where
